@@ -7,4 +7,94 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'HocAngular';
+  wheys = [
+    {
+      id:1,
+      name: "Diesel New Zealand 5lbs",
+      price: "2,200,000 đ",
+      image: "../assets/diesel-whey.jpg",
+      status: "out of stock",
+    },
+    {
+      id:2,
+      name: "Dymatize Iso 100 5lbs",
+      price: "2,150,000 đ",
+      image: "../assets/iso-100.jpg",
+      status: "out of stock",
+    },
+    {
+      id:3,
+      name: "BioTechUSA Hydro Whey Zero 4lbs",
+      price: "2,150,000 đ",
+      image: "../assets/biotech-zero.jpg",
+      status: "out of stock",
+    },
+    {
+      id:4,
+      name: "ON Whey Gold Standard",
+      price: "1,750,000 đ",
+      image: "../assets/on-whey-gold.jpg",
+      status: "out of stock",
+    },
+    {
+      id:5,
+      name: "Leanfit Sport Protein & Collagen 2Kg",
+      price: "2,250,000 đ",
+      image: "../assets/leanfit-whey-collagen.jpg",
+      status: "out of stock",
+    },
+    {
+      id:6,
+      name: "Whey Protein Beyond Isolate 5Lbs",
+      price: "1,750,000 đ",
+      image: "../assets/beyond-whey.jpg",
+      status: "out of stock",
+    },
+    {
+      id:7,
+      name: "Mutant Iso Surge 5lbs",
+      price: "1,950,000 đ",
+      image: "../assets/mutant-iso-surge.jpg",
+      status: "out of stock",
+    },
+    {
+      id:8,
+      name: "ON Platinum HydroWhey 3.5lbs",
+      price: "1,850,000 đ",
+      image: "../assets/on-whey-platinum.jpg",
+      status: "out of stock",
+    },
+    {
+      id:9,
+      name: "Nutrabolics Hydropure 4.5 Lbs",
+      price: "1,890,000 đ",
+      image: "../assets/nutrabolic-whey.jpg",
+      status: "out of stock",
+    },
+    {
+      id:10,
+      name: "Vitaxtrong Iso Pro 5lbs",
+      price: "1,950,000 đ",
+      image: "../assets/iso-pro.jpg",
+      status: "out of stock",
+    },
+    {
+      id:11,
+      name: "IsoTope Redcon1 5lbs",
+      price: "1,800,000 đ",
+      image: "../assets/redcon1-isotope.jpg",
+      status: "out of stock",
+    },
+    {
+      id:12,
+      name: "Scitec Nutrition 100% Hydro Isolate 2Kg",
+      price: "2,730,000 đ",
+      image: "../assets/scitec-whey-green.jpg",
+      status: "out of stock",
+    },
+  ]
+
+  like(title: string) {
+    console.log("liked", title);
+  }
 }
