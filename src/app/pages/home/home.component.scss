@@ -1,0 +1,78 @@
+// .example-spacer {
+//   flex: 1 1 auto;
+// }
+// .spacer {
+//     flex: 1 1 auto;
+//   }
+
+  .sub{
+    text-align: center;
+  }
+  .name{
+    //display: inline-block;
+    margin-left:0.5rem;
+  }
+  .status{
+    text-align: center;
+    font-size:1.3rem; 
+  }
+  .other-info{
+    align-self: center;
+  }
+  .example-card {
+    max-width: 400px;
+    margin-top: 8px;
+    margin-right: 9px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    //display: flex;
+    }
+  
+    .example-header-image {
+      //background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+      background-size: cover;
+    }
+  .Mua{
+    display: flex;
+    width: 70%;
+    height: 2rem;
+    background-color: green;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    font-size: 1.5rem;
+  } 
+  .Thich{
+    display: flex;
+    width: 30%;
+    height: 2rem;
+    background-color: gray;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    font-size: 1.5rem;
+  } 
+    .ex2 .parent {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .ex2 .box {
+      flex: 1 1 150px; /*  Stretching: */
+      flex: 0 1 150px; /*  No stretching: */
+      margin: 5px;
+    }
+    h1{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      font-size: 200%;
+    }
+    .price{
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      font-size: 1.8rem;
+      color: red;
+    }

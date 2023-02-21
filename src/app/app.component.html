@@ -1,42 +1,23 @@
-<mat-toolbar>
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+<mat-toolbar color="primary">
+
+  <button (click)='goToHome()' mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
     <mat-icon>menu</mat-icon>
   </button>
-  <span>Sản phẩm</span>
-  <span class="spacer"></span>
-  <button mat-icon-button class="search-icon" aria-label="Example icon-button with search icon">
-    <mat-icon>search</mat-icon>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
   </button>
-  
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+
+<button class="login" (click)='login()'> Log in</button>
+
+<button class="logout" (click)='logout()'> Log out</button>
+<div *ngIf="authService.currentUser"> {{authService.currentUser.displayName}}</div>
+<img *ngIf="authService.currentUser" [src]="authService.currentUser.photoURL" alt="">
 </mat-toolbar>
+<!-- <img *ngIf="" [src]="authService.currentUser.photoURL" alt="">  -->
 
-<h1> Các sản phẩm</h1>
-<div class="content">
-<mat-card *ngFor="let whey of wheys">
-
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title-group>
-    <mat-card-title class="name">{{whey.name}}</mat-card-title>
-    <mat-card-subtitle class="sub">Whey Protein</mat-card-subtitle>
-  </mat-card-title-group>
-  </mat-card-header>
-  <div class="other-info">  
-    <mat-card-content>
-      <img mat-card-image [src]="whey.image" alt="Whey Protein">
-    <div class="status">{{whey.status}}</div>
-    <hr>    
-      <p class="price">
-        {{whey.price}}
-      </p>
-    </mat-card-content>
-  </div>
- 
-  <mat-card-footer>
-  <mat-card-actions>
-    <button mat-button class="Mua">Mua</button>
-    <button mat-button class="Thich" (click)="like(whey.name)">Thích</button>
-    
-  </mat-card-actions>
-</mat-card-footer>
-</mat-card>
+<router-outlet></router-outlet>

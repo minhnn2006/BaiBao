@@ -1,10 +1,23 @@
-.spacer {
+.example-spacer{
   flex: 1 1 auto;
+  
+}
+.login{
+  background-color:#673ab7;
+  height: 2rem;
+  width: 4rem;
+}
+img{
+  size: 1rem;
+}
+.logout{
+  background-color:#673ab7;
+  height: 2rem;
+  width: 4rem;
 }
 .content {
   // display: table-cell;
-  
-  // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  //grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   display: flex;
   flex-wrap: wrap;
 }
