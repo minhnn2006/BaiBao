@@ -1,5 +1,7 @@
-export interface NewState {
-    id: number;
-    description: string,
-    url: string;
+import {New} from "rc/app/models/news.model"
+export interface New{
+    loading: boolean,
+    loaded:boolean,
+    error:boolean,
+    news:New[]
 }
