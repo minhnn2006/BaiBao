@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { Auth, onAuthStateChanged, User } from '@angular/fire/auth';
 import { HttpService } from './service/http.service';
 import { Observable } from 'rxjs';
-import { News } from './models/news.model';
+
 import { AuthService } from './service/auth.service';
 @Component({
   selector: 'app-root',
