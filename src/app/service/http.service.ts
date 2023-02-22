@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { News } from '../models/news.model';
+
 import { map } from 'rxjs';
 @Injectable({
   providedIn: 'root'
