@@ -14,7 +14,7 @@ import {Actions}
             return this.http.get(this.apiURL)
         }),
         map((response:any)=>{
-            return NewActions.getNewsSuccess({news:response })
+            return NewActions.getNewsSuccess({news:<Array<New>>response })
         }),
         catchError((error)=>{
             return of(NewActions.getNewsFailure({error:error}))
