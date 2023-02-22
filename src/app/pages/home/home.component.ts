@@ -11,13 +11,17 @@ import { News } from 'src/app/models/news.model';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  new:Observable<NewState>
   news = this.httpService.get();
   authService: any;
   constructor(private router: Router, private httpService: HttpService,
-    private auth: AuthService, private new:Store<{}> ){
-    
+    private auth: AuthService, private newStore:Store<{new:NewState}> ){
+    this.new$=this.newStore.select('new')
   }
+  ngOnInit(): void{
+    this.newStore.dispatch(NewActions.getNews());
+}
   CanActivate(router: ActivatedRouteSnapshot, state: RouterStateSnapshot){
     const user = this.authService.userValue;
         if (user) {
