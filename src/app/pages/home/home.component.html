@@ -1,7 +1,7 @@
 
   <h1> Các bài báo</h1>
 
-  <div *ngFor="let new of (news|async)?.articles">
+  <div *ngFor="let new of (this.new$|async)?.news">
         <p>{{new.id}}</p>
         <p>{{new.description}}</p>
         <p>{{new.url}}  </p>
