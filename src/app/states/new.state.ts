@@ -1,4 +1,4 @@
-import {New} from "rc/app/models/news.model"
+import {New} from "src/app/models/news.model"
 export interface NewState{
     loading: boolean,
     isSuccess:boolean,

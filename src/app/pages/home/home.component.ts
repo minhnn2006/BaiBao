@@ -1,10 +1,13 @@
 import { AuthService } from './../../service/auth.service';
 import { HttpService } from './../../service/http.service';
 import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
-import { News } from 'src/app/models/news.model';
+
+import { Store } from '@ngrx/store';
+import { NewActions } from 'src/app/actions/new.action';
+import { NewState } from 'src/app/states/new.state';
 
 @Component({
   selector: 'app-home',
@@ -12,8 +15,8 @@ import { News } from 'src/app/models/news.model';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  new:Observable<NewState>
-  news = this.httpService.get();
+  new$:Observable<NewState>
+  // news = this.httpService.get();
   authService: any;
   constructor(private router: Router, private httpService: HttpService,
     private auth: AuthService, private newStore:Store<{new:NewState}> ){
@@ -44,9 +47,9 @@ export class HomeComponent implements OnInit {
     this.router.navigate(['home']);
   }
   //new$ = new Observable<News[]>();
-  ngOnInit(): void{
-    this.news = this.httpService.get();
-  }
+  // ngOnInit(): void{
+  //   this.news = this.httpService.get();
+  // }
   loginWithGoogle(){
     this.authService.loginWithGoogle();
   }

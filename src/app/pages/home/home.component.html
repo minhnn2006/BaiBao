@@ -1,8 +1,10 @@
 
   <h1> Các bài báo</h1>
 
-  <div *ngFor="let new of (this.new$|async)?.news">
+  <div *ngFor="let new of (this.new$|async)?.news" class="baibao">
       {{new.id}}
+      {{new.description}}
+      
   </div>
 
 

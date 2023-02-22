@@ -1,5 +1,6 @@
 
-import New from 'src/app/models/news.models'
+import { createAction, props } from '@ngrx/store'
+
 
 export const NewActions={
   getNews:createAction('[New] get all new'),

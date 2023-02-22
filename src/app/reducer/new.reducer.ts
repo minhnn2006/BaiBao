@@ -1,4 +1,6 @@
-import {createReducer, on}
+import { NewActions } from "../actions/new.action";
+import { NewState } from "../states/new.state";
+import {createReducer, on} from '@ngrx/store'
 
 
 const initialState:NewState={
@@ -10,26 +12,25 @@ const initialState:NewState={
 export const newReducer = createReducer(
     initialState,
     on(NewActions.getNews,(state)=>{
-        return(
+        return{
             ...state,
             loading: true,
-        );
+    };
     }),
     on(NewActions.getNewsSuccess,(state,{news})=>{
-        return(
+        return{
             ...state,
             loading: false,
             news:news
-        );
+        };
     }),
-    on(NewActions.getNewsSuccess,(state,{error})=>{
-        return(
+    on(NewActions.getNewsFailure,(state,{error})=>{
+        return{
             ...state,
             loading: false,
             isSuccess:false,
             error:error,
-
-        );
+        };
     }),
 
 )

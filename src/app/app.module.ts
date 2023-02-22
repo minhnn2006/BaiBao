@@ -1,3 +1,4 @@
+import { newReducer } from './reducer/new.reducer';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -13,6 +14,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
+import { New } from './effects/news.effects';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,7 @@ import { StoreModule } from '@ngrx/store';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
     EffectsModule.forRoot([New]),
-    StoreModule.forRoot({new.newReducer}, {})
+    StoreModule.forRoot({new:newReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]

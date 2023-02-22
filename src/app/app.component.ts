@@ -1,3 +1,4 @@
+import { New } from 'src/app/models/news.model';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Auth, onAuthStateChanged, User } from '@angular/fire/auth';
@@ -24,7 +25,7 @@ export class AppComponent {
   goToHome(){
     this.router.navigate(['home']);
   }
-  new$ = new Observable<News[]>();
+  new$ = new Observable<New[]>();
   ngOnInit(): void{
     onAuthStateChanged((this.auth), (user)=> {
       if(user) {
