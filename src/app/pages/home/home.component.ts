@@ -15,7 +15,7 @@ export class HomeComponent {
   news = this.httpService.get();
   authService: any;
   constructor(private router: Router, private httpService: HttpService,
-    private auth: AuthService ){
+    private auth: AuthService, private new:Store<{}> ){
     
   }
   CanActivate(router: ActivatedRouteSnapshot, state: RouterStateSnapshot){
