@@ -1,7 +1,7 @@
 import {createReducer, on}
 
 
-const initialState:News={
+const initialState:NewState={
     news:[],
     loading: false,
     isSuccess:false,
