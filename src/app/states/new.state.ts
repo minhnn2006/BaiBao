@@ -1,5 +1,5 @@
 import {New} from "rc/app/models/news.model"
-export interface New{
+export interface NewState{
     loading: boolean,
     isSuccess:boolean,
     error:string,
