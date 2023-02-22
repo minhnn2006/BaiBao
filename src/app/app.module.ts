@@ -27,8 +27,8 @@ import { StoreModule } from '@ngrx/store';
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
-    EffectsModule.forRoot([]),
-    StoreModule.forRoot({}, {})
+    EffectsModule.forRoot([New]),
+    StoreModule.forRoot({new.newReducer}, {})
   ],
   providers: [],
   bootstrap: [AppComponent]
