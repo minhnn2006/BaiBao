@@ -2,7 +2,7 @@ import { NewActions } from "../actions/new.action";
 import { NewState } from "../states/new.state";
 import {createReducer, on} from '@ngrx/store'
 
-
+//ertyuio
 const initialState:NewState={
     news:[],
     loading: false,
